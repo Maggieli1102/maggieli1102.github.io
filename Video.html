@@ -15,17 +15,14 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>MAGGIE<br>LI</b></h3>
-  <a href="#photo" onclick="w3_close()" class="w3-bar-item w3-button">Photo Project</a> 
-  <a href="#audio" onclick="w3_close()" class="w3-bar-item w3-button">Audio Project</a> 
-  <a href="#video" onclick="w3_close()" class="w3-bar-item w3-button">Video Project</a> 
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+  <a href="https://maggieli1102.github.io/PortfolioBeforeReview.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a> 
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
 </nav>
 
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
   <span class="w3-left w3-padding">Maggie LI</span>
-  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+  <a class="w3-right w3-button w3-black" onclick="goBack()">BACK</a>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -38,19 +35,14 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
   <!-- Photo grid -->
-  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id=photo>
-      <a href="https://maggieli1102.github.io/Photo.html"><img src="https://maggieli1102.github.io/picture.jpg" style="width:100%"></a>
+ <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id=video>
+     <video width="320" height="240" controls>
+         <source src="https://maggieli1102.github.io/VideoAfterReview.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+       <a href="https://maggieli1102.github.io/VideoAfterReview.mp3" target="_blank">Click here for original.</a>
     </div>
     
-    <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id=audio>
-    <a href="https://maggieli1102.github.io/Audio.html"><img src="https://maggieli1102.github.io/audio.png" style="width:100%"></a>
-    </div>
-    
-    <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id=video>
-      <a href="https://maggieli1102.github.io/Video.html"><img src="https://maggieli1102.github.io/video.png" style="width:100%"></a>
-    </div>
-    
-
   
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
@@ -58,19 +50,6 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
       <img id="img01" class="w3-image">
       <p id="caption"></p>
-    </div>
-  </div>
-
-  <!-- About section -->
-  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
-    <h4><b>About Me</b></h4>
-    <img src="https://maggieli1102.github.io/WechatIMG1.jpeg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
-    <div class="w3-content w3-justify" style="max-width:600px">
-      <h4>My Name</h4>
-      <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-      </p>
-      <p>mail: example@example.com</p>
-      <p>tel: 5353 35531</p>  
     </div>
   </div>
 
@@ -104,6 +83,10 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+function goBack() {
+    window.history.back()
+}    
+
 
 </script>
 
